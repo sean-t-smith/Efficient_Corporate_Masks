@@ -21,6 +21,7 @@ In your process for cracking passwords, these files can be used as a last step. 
 
 1) Basic dictionary attack... ie RockYou
 2) Brute force all permutations 1-7 character length passwords... this does not take long given the minimal keyspace of this group.
+hashcat.exe --increment --increment-min=1 -d <include_gpu_numbers> -m 1000 -w 4 -a 3 <ntlm_hashes.txt> -1 ?l?u?d?s ?1?1?1?1?1?1?1 --force
 3) Targeted dictionary attack... create a custom lowercase word list using CeWL, local sports teams, city names, mascots, etc and apply the best64.rule
 4) Analyze the set of cracked passwords for potential patterns, run targeted attacks which reflect those patterns.
 5) BIG dictionary attack... run the passwords through the largest wordlist you have.
