@@ -26,3 +26,7 @@ In your process for cracking passwords, these files can be used as a last step. 
 5) BIG dictionary attack... run the passwords through the largest wordlist you have.
 6) Analyze any newly cracked passwords for potential patterns, run targeted attacks which reflect those patterns.
 7) Use this repository of work and run the "Efficient_#.hcmask" from this repo according to your needs.
+
+## Example Hashcat Command for Using the .hcmask to Crack NTLM Hashes
+
+hashcat.exe -d <include_gpu_numbers> -m 1000 -w 4 -a 3 --session <name_your_session> <ntlm_hashes.txt> Efficient_8-14.hcmask --force
