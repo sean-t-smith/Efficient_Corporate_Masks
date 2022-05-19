@@ -13,16 +13,16 @@ Forked from the work of golem445 who compiled a list of 8-14 character Hashcat m
 3) Created a column that calculated the total keyspace of each mask.
 4) Created a column that assigned an efficiency score to each mask using the formula: (occurrence / keyspace) * 1 Trillion
 5) Sorted the entire spreadsheet by the efficiency score
-6) Filtered the spreadsheet by characters and exported the sorted masks into new "Efficient" .hcmask files
+6) Filtered the spreadsheet by characters and exported the sorted masks into new "Efficient" .hcmask files.
 
 ## Usage
 
 In your process for cracking passwords, these files can be used as a last step.  My recommended password cracking attack order is below:
 
 1) Basic dictionary attack... ie RockYou
-2) Brute force all permutations 1-7 characters length passwords... this does not take long given the minimal keyspace of this group
+2) Brute force all permutations 1-7 character length passwords... this does not take long given the minimal keyspace of this group.
 3) Targeted dictionary attack... create a custom lowercase word list using CeWL, local sports teams, city names, mascots, etc and apply the best64.rule
-4) Analyze set of cracked passwords for potential patterns, run targeted attacks which reflect those patterns
-5) BIG dictionary attack... run the passwords through the largest wordlist you have
-6) Analyze any newly cracked passwords for potential patterns, run targeted attacks which reflect those patterns
+4) Analyze the set of cracked passwords for potential patterns, run targeted attacks which reflect those patterns.
+5) BIG dictionary attack... run the passwords through the largest wordlist you have.
+6) Analyze any newly cracked passwords for potential patterns, run targeted attacks which reflect those patterns.
 7) Use this repository of work and run the "Efficient_#.hcmask" from this repo according to your needs.
