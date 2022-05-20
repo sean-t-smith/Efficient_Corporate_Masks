@@ -4,7 +4,7 @@
 To improve the efficiency of password cracking using hashcat mask attacks by prioritizing masks with the highest password cracking probability in the shortest possible time.
 
 ## Background
-Forked from the work of golem445 who compiled a list of 8-14 character Hashcat masks based on an analysis of 1.5 million NTLM hashes cracked during pentesting. I started using these lists, but quickly realized that it was taking a long time with my limited GPU cracking resources... I needed to re-order and efficiently prioritize the masks somehow.  Luckily, golem445 included the "corp_8-14.statsgen" file which included the frequency that each mask in the data set was found.  The frequency along with the mask gave me everything that I needed to prioritize each mask using an efficiency score rather than just by frequency.  The efficiency score allowed me to prioritize masks with a higher probably of cracking the password in the shortest possible time.
+Forked from the work of golem445 who compiled a list of 8-14 character Hashcat masks based on an analysis of 1.5 million NTLM hashes cracked during pentesting.  I started using these lists, but quickly realized that it was taking a long time with my limited GPU cracking resources...  I needed to re-order and efficiently prioritize the masks somehow.  Luckily, golem445 included the "corp_8-14.statsgen" file which included the frequency that each mask in the data set was found.  The frequency along with the mask gave me everything that I needed to prioritize each mask using an efficiency score rather than just by frequency.  The efficiency score allowed me to prioritize masks with a higher probably of cracking the password in the shortest possible time.
 
 ## Methodology
 1) Imported the "corp_8-14.statsgen" file into the MS Excel file: hcmask_Generator_9000.xlsx
@@ -16,8 +16,7 @@ Forked from the work of golem445 who compiled a list of 8-14 character Hashcat m
 6) Filtered the spreadsheet by characters and exported the sorted masks into new "Efficient" .hcmask files.
 
 ## Usage
-
-In your process for cracking passwords, these files can be used as a last step.  My recommended password cracking attack order is below:
+The .hcmask files above describe passwords of differing character lenghts (8-14 characters), each sorted by efficiency, and formatted for use by the Hashcat password cracking tool.  Depending on your situation, you might want to focus on passwords of a specific length only vs the entire set (Efficiency_8-14).  The included spreadsheet has the analysis if you want to re-sort and generate your own hcmask file.  Recognize that this type of brute force mask attack can take a long time and should be performed last after you have exhausted more targeted methods.  My recommended password cracking attack order is below:
 
 1) Basic dictionary attack with your favorite wordlist... ie rockyou.txt
 ```
