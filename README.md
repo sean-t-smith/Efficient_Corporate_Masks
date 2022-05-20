@@ -27,7 +27,7 @@ hashcat.exe -d <include_gpu_numbers> -m 1000 -w 4 -a 3 --session <name_your_sess
 ```
 hashcat.exe --increment --increment-min=1 -d <include_gpu_numbers> -m 1000 -w 4 -a 3 --session <name_your_session> <ntlm_hashes.txt> -1 ?l?u?d?s ?1?1?1?1?1?1?1 --force
 ```
-3) Targeted dictionary attack... create a custom lowercase word list using CeWL, local sports teams, city names, mascots, etc and apply the best64.rule
+3) Targeted dictionary attack... create a custom lowercase wordlist using CeWL and add local sports teams, city names, mascots, etc and apply the best64.rule
 ```
 hashcat.exe -d <include_gpu_numbers> -m 1000 -w 4 -a 3 --session <name_your_session> <ntlm_hashes.txt> <custom_wordlist.txt> -r best64.rule --force
 ```
