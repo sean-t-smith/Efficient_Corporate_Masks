@@ -6,7 +6,7 @@ To improve the efficiency of password cracking using hashcat mask attacks by pri
 ## Background
 Forked from the work of golem445 who compiled a list of 8-14 character Hashcat masks based on an analysis of 1.5 million NTLM hashes cracked during pentesting.  I started using these lists, but quickly realized that it was taking a long time with my limited GPU cracking resources...  I needed to re-order and efficiently prioritize the masks somehow.  Luckily, golem445 included the "corp_8-14.statsgen" file which included the frequency that each mask in the data set was found.  The frequency along with the mask gave me everything that I needed to prioritize each mask using an efficiency score rather than just by frequency.  The efficiency score allowed me to prioritize masks with a higher probably of cracking the password in the shortest possible time.
 
-## Methodology
+## Sorting Methodology
 1) Imported the "corp_8-14.statsgen" file into the MS Excel file: hcmask_Generator_9000.xlsx
 2) Separated the mask and occurrence into different columns.
 2) Created a column that counted the total characters represented by each mask.
