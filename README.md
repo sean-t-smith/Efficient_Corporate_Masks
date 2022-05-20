@@ -12,7 +12,7 @@ Forked from the work of golem445 who compiled a list of 8-14 character Hashcat m
 2) Created a column that counted the total characters represented by each mask.
 3) Created a column that calculated the total keyspace of each mask.
 4) Created a column that assigned an efficiency score to each mask using the formula: (occurrence / keyspace) * 1 Trillion
-5) Sorted the entire spreadsheet by the efficiency score
+5) Sorted the entire spreadsheet by the efficiency score.
 6) Filtered the spreadsheet by characters and exported the sorted masks into new "Efficient" .hcmask files.
 
 ## Usage
