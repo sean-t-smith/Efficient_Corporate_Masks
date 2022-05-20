@@ -8,10 +8,10 @@ Forked from the work of golem445 who compiled a list of 8-14 character Hashcat m
 
 ## Sorting Methodology
 1) Imported the "corp_8-14.statsgen" file into the MS Excel file: hcmask_Generator_9000.xlsx
-2) Separated the mask and occurrence into different columns.
+2) Separated the mask and frequency into different columns.
 2) Created a column that counted the total characters represented by each mask.
 3) Created a column that calculated the total keyspace of each mask.
-4) Created a column that assigned an efficiency score to each mask using the formula: (occurrence / keyspace) * 1 Trillion
+4) Created a column that assigned an efficiency score to each mask using the formula: (frequency / keyspace) * 1 Trillion
 5) Sorted the entire spreadsheet by the efficiency score.
 6) Filtered the spreadsheet by characters and exported the sorted masks into new "Efficient" .hcmask files.
 
