@@ -13,7 +13,8 @@ Forked from the work of golem445 who compiled a list of 8-14 character Hashcat m
 3) Created a column that calculated the total keyspace of each mask.
 4) Created a column that assigned an efficiency score to each mask using the formula: (frequency / keyspace) * 1 Trillion
 5) Sorted the entire spreadsheet by the efficiency score.
-6) Filtered the spreadsheet by characters and exported the sorted masks into new "Efficient" .hcmask files.
+6) Created a mechanism to filter the spreadsheet by execution time based on your anticipated hashing speed.
+7) Filtered the spreadsheet by characters and exported the sorted masks into new "Efficient" .hcmask files.
 
 ## Usage
 The .hcmask files above describe passwords of differing character lenghts (8-14 characters), each sorted by efficiency, and formatted for use by the Hashcat password cracking tool.  Depending on your situation, you might want to focus on passwords of a specific length only vs the entire set (Efficiency_8-14).  The included spreadsheet has the analysis if you want to re-sort and generate your own hcmask file.  Recognize that this type of brute force mask attack can take a long time and should be performed last after you have exhausted more targeted methods.  My recommended password cracking attack order is below:
